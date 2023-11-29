@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+
+/* Main Container CSS */
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5;
+    min-height: 700px;
+    align-items: flex-start;
+    margin-top: 80px;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+}
+
+/* Sorting Dropdown CSS */
+
+.sortDropdownContainer {
+    position: absolute;
+    top: 80px;
+    right: 10px;
+}
+
+.sortLabel {
+    margin-right: 8px;
+}
+
+.sortDropdown {
+    margin: 5px;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+  
+/* Task Card CSS */
+.taskContainer {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    padding: 20px;
+    width: calc(50% - 20px); 
+    max-width: 400px; 
+    text-align: center;
+    margin: 20px; 
+    max-height: 300px; 
+    overflow-y: auto; 
+    transition: transform 0.2s ease-in-out; 
+}
+
+.taskContainer:hover {
+    transform: scale(1.03); 
+}
+
+.taskDetails {
+    margin-bottom: 10px;
+}
+
+.taskName {
+    font-family: 'Cabin', sans-serif;
+    margin: 5px;
+    font-size: 25px;
+}
+
+.taskDescription {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #777;
+}
+
+.descriptionTitle{
+    color: black;
+    font-weight: bold;
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* Edit Button CSS */
+.editBtn {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #005b96;
+    border-radius: 20%;
+    color: #005b96;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 10px 10px 9px;
+    text-decoration: none;
+    cursor: pointer;
+    background: #fff;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.editBtn span:first-child {
+    position: relative;
+    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 10;
+}
+
+.editBtn span:last-child {
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 100;
+    opacity: 0;
+    top: 65%;
+    left: 50%;
+    transform: translateY(225%) translateX(-50%);
+    height: 14px;
+    line-height: 13px;
+}
+
+.editBtn:after {
+    content: "";
+    position: absolute;
+    bottom: -40%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #005b96;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+}
+
+.editBtn:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+}
+
+.editBtn:hover span:last-child {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+
+/* Checkbox CSS */
+.checkbox {
+    margin-top: auto;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#unchecked {
+    color: #555; 
+    transform: scale(1.5); 
+    width: 32px; 
+    height: 32px;
+}
+
+#checked {
+    color: #4caf50; 
+    transform: scale(2.0); 
+    width: 32px;
+    height: 32px;
+}
+
+.completedTask {
+    background-color: #e8f5e9; 
+}
+
+.completedTask .taskName {
+    text-decoration: line-through; 
+}
+
+.completedTask .taskDescription {
+    text-decoration: line-through; 
+}
+
+.completedTask .taskDue {
+    text-decoration: line-through; 
+}
+
+
+
+
+/* Delete Button CSS */
+.deleteBtn {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #f00;
+    border-radius: 20%;
+    color: #f00;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 10px 10px 9px;
+    text-decoration: none;
+    cursor: pointer;
+    background: #fff;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.deleteBtn span:first-child {
+    position: relative;
+    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 10;
+}
+
+.deleteBtn span:last-child {
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 100;
+    opacity: 0;
+    top: 65%;
+    left: 50%;
+    transform: translateY(225%) translateX(-50%);
+    height: 14px;
+    line-height: 13px;
+}
+
+.deleteBtn:after {
+    content: "";
+    position: absolute;
+    bottom: -40%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f00;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+}
+
+.deleteBtn:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+}
+
+.deleteBtn:hover span:last-child {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/* Media query to stack only two containers in a row on smaller screens */
+@media (max-width: 800px) {
+    .mainContainer {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .taskContainer {
+    margin-right: 0;
+    }
+}

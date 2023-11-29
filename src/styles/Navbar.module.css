@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@700&display=swap');
+
+
+/* Main Navbar Container CSS */
+.navContainer {
+    font-family: 'Phudu', sans-serif;
+    top: 0;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    position: fixed; 
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logoContainer{
+    display: flex;
+    margin-top: 4px;
+    align-items: center; 
+}
+
+.logoContainer h1 {
+    color: black;
+    margin: 0;
+    padding: 10px;
+}
+
+.logoContainer h1:hover {
+    color: #6354B2;
+}
+
+.logoContainer img {
+    height: 50px;
+    margin: 0 10px;
+}
+
+.listContainer{
+    display: flex;
+    margin-left: -5%;
+    align-items: center; 
+}
+
+.listContainer h2 {
+    color: black;
+    margin: 0;
+    padding: 10px;
+}
+
+.listContainer:hover > h2, 
+.listContainer:hover > span{
+    color: #6354B2;
+}
+
+.listContainer span {
+    color: black;
+    margin: 20px 0px;
+}
