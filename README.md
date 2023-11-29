@@ -20,11 +20,17 @@ The Task Manager App is a web application designed to help users manage their ta
 ## Features
 
 - Add tasks with details like name, description, priority, and due date.
+  ![addtask](https://github.com/prathikshetty14/taskmanager/assets/63280396/fa868432-a0d0-4560-86e4-e46f79d4a060)
+
 - Edit existing tasks to update information.
+  ![edittask](https://github.com/prathikshetty14/taskmanager/assets/63280396/9570bc93-b78a-4bd8-8634-dfcdfe504887)
+
 - Delete tasks when they are no longer needed.
 - Mark tasks as completed with a checkbox.
 - Sort tasks based on priority.
 - Visual indicators for overdue tasks.
+  ![tasklist](https://github.com/prathikshetty14/taskmanager/assets/63280396/a8bfb8ec-e4a5-400e-b9bd-7f4b70e41a1d)
+
 
 ## Tech Stack
 
