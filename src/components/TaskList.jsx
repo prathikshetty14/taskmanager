@@ -30,7 +30,12 @@ function TaskList(){
           return priorityB - priorityA;
         }
       })
-    : tasks;
+    : tasks.slice().sort((a, b) => {
+        // Sort based on completion status
+        if (a.completed && !b.completed) return 1;
+        if (!a.completed && b.completed) return -1;
+        return 0;
+    });
 
     
     // Todays Date
