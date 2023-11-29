@@ -1,5 +1,10 @@
 # Task Manager App
 
+## About the Project
+
+The Task Manager App is a web application designed to help users manage their tasks efficiently. Users can add, edit, and delete tasks, set priorities, and keep track of due dates.
+
+
 ## Table of Contents
 
 - [About the Project](#about-the-project)
@@ -11,9 +16,6 @@
 - [Usage](#usage)
 - [Author](#author)
 
-## About the Project
-
-The Task Manager App is a web application designed to help users manage their tasks efficiently. Users can add, edit, and delete tasks, set priorities, and keep track of due dates.
 
 ## Features
 
